@@ -8,7 +8,9 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
     entry: "./src/index.tsx",
     plugins: [
-        new BundleAnalyzerPlugin(),
+        new BundleAnalyzerPlugin({
+            analyzerMode: "static",
+        }),
         new CompressionWebpackPlugin(),
         new HtmlWebpackPlugin({
             title: "Max Stahl",
