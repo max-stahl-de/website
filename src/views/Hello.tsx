@@ -82,6 +82,7 @@ const Banner = styled.div`
 
     @media (max-width: 990px) {
         width: 80%;
+        margin-bottom: 0px;
     }
 `;
 
@@ -98,15 +99,11 @@ const TextAnimationContainer = styled.div`
         font: bolder 48px "Roboto", sans-serif;
         @media (max-width: 990px) {
             max-width: 5px;
-            font: bolder 30px "Roboto", sans-serif;
         }
     }
 
     .type-animation::after {
         font: lighter 48px "Roboto", sans-serif;
-        @media (max-width: 990px) {
-            font: lighter 30px "Roboto", sans-serif;
-        }
     }
 `;
 

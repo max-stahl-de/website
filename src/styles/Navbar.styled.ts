@@ -34,7 +34,7 @@ export const LogoButton = styled.button`
     align-items: flex-start;
     flex-direction: column;
     min-width: 30%;
-    margin: 20px 20px 0px 20px;
+    padding: 10px;
 `;
 
 export const LeftContainer = styled.div`

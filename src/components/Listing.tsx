@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Content, H6MonoStyled, Monospace, SubTitle } from "../styles/Text.styled";
+import { H6MonoStyled, Monospace } from "../styles/Text.styled";
 import { FlexColumn } from "../styles/Utils.styled";
 
 const ListingContainerStyled = styled(FlexColumn)`

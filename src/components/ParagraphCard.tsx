@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 import { FlexColumn, FlexRow, ImageContainer, ImageStyled, Overlay } from "../styles/Utils.styled";
-import { ArticleStyled, H5Styled } from "../styles/Text.styled";
+import { ArticleStyled, H3Styled } from "../styles/Text.styled";
 
 interface StyledProps {
     reverse?: boolean;
@@ -12,7 +12,6 @@ const ParagraphContainer = styled(FlexRow)<StyledProps>`
     width: 100%;
     gap: 20px;
     border-radius: 7px;
-    overflow: hidden;
     ${({ reverse }) =>
         reverse &&
         css`
@@ -34,7 +33,7 @@ const ContentContainer = styled(FlexColumn)<StyledProps>`
     align-items: flex-start;
     justify-content: flex-start;
     gap: 10px;
-    width: 70%;
+    width: 100%;
     height: 100%;
 
     ${({ reverse }) =>
@@ -48,21 +47,14 @@ interface Props {
     image: string;
     title: string;
     content: string;
-    reverse?: boolean;
 }
 
 const ParagraphCard: React.FC<Props> = (props) => {
     return (
-        <ParagraphContainer reverse={props.reverse}>
-            <ImageContainer size={{ width: "30%", height: "100%" }}>
-                <ImageStyled src={props.image}></ImageStyled>
-                <Overlay className="overlay"></Overlay>
-            </ImageContainer>
-            <ContentContainer reverse={props.reverse}>
-                <H5Styled>{props.title}</H5Styled>
-                <ArticleStyled>{props.content}</ArticleStyled>
-            </ContentContainer>
-        </ParagraphContainer>
+        <ContentContainer>
+            <H3Styled>{props.title}</H3Styled>
+            <ArticleStyled>{props.content}</ArticleStyled>
+        </ContentContainer>
     );
 };
 

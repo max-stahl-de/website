@@ -10,13 +10,25 @@ import ParagraphCard from "../components/ParagraphCard";
 const InnerContainer = styled(FlexColumn)`
     width: 80vw;
     margin-top: 80px;
+
+    @media (max-width: 990px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 `;
 
 const TextContainer = styled(FlexRow)`
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
     margin-top: 40px;
     gap: 80px;
-    width: 100%;
+    width: 80%;
+    @media (max-width: 990px) {
+        flex-direction: column;
+
+        width: 100%;
+        margin-top: 10px;
+    }
 `;
 
 const CallToAction = styled.h1`
@@ -24,6 +36,7 @@ const CallToAction = styled.h1`
     font-style: italic;
     letter-spacing: 2px;
     color: #f2eb6f;
+    width: 10px;
 `;
 
 const TextStyled = styled(ArticleStyled)`
@@ -35,13 +48,27 @@ const TextStyled = styled(ArticleStyled)`
     }
 `;
 
+const Slogan = styled(FlexRow)`
+    width: 20%;
+    @media (max-width: 990px) {
+        width: 99%;
+    }
+`;
+
 const TextLeft = styled(FlexColumn)`
-    width: 30%;
+    width: 35%;
+    @media (max-width: 990px) {
+        width: 99%;
+    }
 `;
 const TextRight = styled(FlexColumn)`
     justify-content: flex-start;
+    align-items: flex-start;
     gap: 10px;
     width: 70%;
+    @media (max-width: 990px) {
+        width: 99%;
+    }
 `;
 
 const Sustainability: React.FC = () => {
@@ -51,17 +78,10 @@ const Sustainability: React.FC = () => {
             <InnerContainer>
                 <CarbonClock></CarbonClock>
                 <TextContainer>
-                    <H4Styled>
-                        this is the time we <br />
-                        &ensp;&ensp;have left to limit global
-                        <br />
-                        &ensp;&ensp;&ensp;&ensp;warming to maximum 1.5 °C.
-                    </H4Styled>
-                    <CallToAction>
-                        LET'S
-                        <br />
-                        ACT!
-                    </CallToAction>
+                    <Slogan>
+                        <H4Styled>this is the time we have left to limit global warming to maximum 1.5°C.</H4Styled>
+                    </Slogan>
+                    <CallToAction>LET'S ACT!</CallToAction>
                 </TextContainer>
                 <TextContainer>
                     <TextLeft>
@@ -85,7 +105,6 @@ const Sustainability: React.FC = () => {
                             content="Its the strategy we follow the most. We can optimize algorithms, so they need less computing power, use less bandwidth by using efficient messaging protocols and scale microservices up and - more importantly – down on demand."
                         ></ParagraphCard>
                         <ParagraphCard
-                            reverse
                             image={Bike}
                             title="Sufficiency"
                             content="Only implement features which the user really needs to solve the underlying problem. Software projects can contribute to sufficiency by following the “less is more” principle. With this strategy we can provide software to stakeholders which overall use less resources."

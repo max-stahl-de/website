@@ -1,13 +1,12 @@
 import { H1Styled } from "../styles/Text.styled";
-import { Container, FlexColumn, FlexRow } from "../styles/Utils.styled";
+import { ButtonContainer, Container, FlexColumn, FlexRow, NavigationContainer } from "../styles/Utils.styled";
 import PortfolioCard from "../components/PortfolioCard";
 import styled from "styled-components";
 import Casama from "../assets/casama.jpg";
 import Icas from "../assets/icas.jpg";
 import ContactMe from "../components/ContactMe";
-import { ButtonStyled } from "../styles/Button.styled";
-import handleOnClick from "../utils";
 import PlatformIcons from "../components/PlatformIcons";
+import { WebsiteCarbonBadge } from "react-websitecarbon-badge";
 
 const InnerContainer = styled(FlexColumn)`
     margin-top: 80px;
@@ -22,14 +21,6 @@ const PortfolioCardsContainer = styled.div`
     @media (max-width: 990px) {
         grid-template-columns: repeat(1, 1fr);
     }
-`;
-
-const ButtonContainer = styled(FlexRow)`
-    align-items: flex-end;
-    justify-content: flex-end;
-    margin-top: 20px;
-    gap: 50px;
-    width: 100%;
 `;
 
 const Portfolio: React.FC = () => {
@@ -55,14 +46,20 @@ const Portfolio: React.FC = () => {
                         title="This website"
                         content="I developed this website as my first complete frontend project from scratch using ReactJS, TypeScript, styled-components, and webpack. Besides learning frontend technologies, my focus was on optimizing its performance and resource efficiency to provide a seamless browsing experience."
                         repoUrl="https://github.com/max-stahl-de/website"
-                    ></PortfolioCard>
+                    >
+                        <WebsiteCarbonBadge co2="0.10" percentage="90" url="stahl-development-com" />
+                        <img
+                            src="https://api.thegreenwebfoundation.org/greencheckimage/stahl-development.com?nocache=true"
+                            alt="This website is hosted Green - checked by thegreenwebfoundation.org"
+                        ></img>
+                    </PortfolioCard>
                 </PortfolioCardsContainer>
-                <ButtonContainer>
+                <NavigationContainer>
                     <ButtonContainer>
                         <ContactMe style="black"></ContactMe>
                     </ButtonContainer>
                     <PlatformIcons></PlatformIcons>
-                </ButtonContainer>
+                </NavigationContainer>
             </InnerContainer>
         </Container>
     );

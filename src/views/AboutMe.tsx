@@ -15,16 +15,21 @@ import PlatformIcons from "../components/PlatformIcons";
 import ContactMe from "../components/ContactMe";
 import handleOnClick from "../utils";
 
+const ContentWrapper = styled(FlexColumn)`
+    max-width: 1450px;
+`;
+
 const InnerContainer = styled(FlexRow)`
     align-items: flex-start;
     gap: 40px;
     width: 100vw;
-    height: 550px;
     margin-top: 80px;
+    flex-wrap: wrap;
+    padding: 0px 20px;
 
     @media (max-width: 990px) {
+        min-height: 100vh;
         align-items: center;
-        flex-direction: column;
     }
 `;
 
@@ -34,11 +39,7 @@ const ImageContainer = styled(FlexCenter)`
     min-height: 550px;
     border-radius: 7px;
     overflow: hidden;
-
-    @media (max-width: 990px) {
-        width: 90%;
-        height: 80%;
-    }
+    flex-shrink: 2;
 `;
 
 const ImageStyled = styled.img`
@@ -51,11 +52,10 @@ const ImageStyled = styled.img`
 `;
 
 const ContentContainer = styled(FlexColumn)`
-    position: relative;
     align-items: flex-start;
     justify-content: flex-start;
     width: 50%;
-    height: 100%;
+    min-height: 550px;
     gap: 10px;
 
     @media (max-width: 990px) {
@@ -65,8 +65,13 @@ const ContentContainer = styled(FlexColumn)`
 
 const HeaderContainer = styled(FlexRow)`
     justify-content: flex-start;
+    flex-wrap: wrap;
     color: #2b2b2b;
     gap: 5px;
+
+    @media (max-width: 990px) {
+        gap: 0px;
+    }
 `;
 
 const SubHeaderContainer = styled(FlexColumn)`
@@ -77,6 +82,7 @@ const ListingContainer = styled(FlexRow)`
     justify-content: space-between;
     align-items: flex-start;
     padding-top: 10px;
+    flex-wrap: wrap;
     width: 100%;
     gap: 20px;
 `;
@@ -102,8 +108,7 @@ const AboutMe: React.FC = () => {
                         Lead for Devs and DevOps. My diverse experience gives me a unique perspective on software
                         development, and I am a passionate advocate for sustainable and ethical practices. With strong
                         communication skills and exceptional teamwork abilities, I am committed to collaborating
-                        effectively and delivering high-quality solutions. <br />
-                        <br />
+                        effectively and delivering high-quality solutions. <br /> <br />
                         Here is a selection of technologies, tools and methods I have worked with:
                     </ArticleStyled>
                     <ListingContainer>

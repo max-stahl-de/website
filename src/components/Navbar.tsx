@@ -9,7 +9,7 @@ import {
     NavbarMobileContainer,
     MenuButtonMobile,
 } from "../styles/Navbar.styled";
-import { SubTitle, Title } from "../styles/Text.styled";
+import { ArticleStyled, H5Styled } from "../styles/Text.styled";
 import { useState } from "react";
 import Burger from "./Burger";
 import handleOnClick from "../utils";
@@ -25,8 +25,8 @@ const Navbar: React.FC = () => {
         <NavbarStyled>
             <NavbarInnerContainer>
                 <LogoButton onClick={() => handleOnClick("hello")}>
-                    <Title margin="0px 0px -3px 0px">stahl-development</Title>
-                    <SubTitle>sustainable software engineering</SubTitle>
+                    <H5Styled>stahl-development</H5Styled>
+                    <ArticleStyled>sustainable software engineering</ArticleStyled>
                 </LogoButton>
                 <LeftContainer>
                     <Menu>

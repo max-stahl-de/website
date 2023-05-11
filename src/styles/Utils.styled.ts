@@ -25,7 +25,7 @@ export const Container = styled(FlexColumn)<StyledProps>`
     width: 100vw;
     min-height: 100vh;
     color: ${({ color }) => color || "#2b2b2b"};
-    padding: 80px;
+    padding: 80px 0px;
     background-color: ${({ bgColor }) => bgColor || "#fcfcfc"};
 `;
 
@@ -33,16 +33,19 @@ export const ButtonContainer = styled(FlexRow)`
     align-items: flex-end;
     justify-content: flex-start;
     gap: 20px;
-    width: 100%;
 `;
 
 export const NavigationContainer = styled(FlexRow)`
-    position: absolute;
-    bottom: 0;
     align-items: flex-end;
+    justify-content: space-between;
     width: 100%;
     margin-top: 30px;
-    gap: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    @media (max-width: 990px) {
+        justify-content: center;
+    }
 `;
 
 export const ImageContainer = styled.div<StyledProps>`

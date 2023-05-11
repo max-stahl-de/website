@@ -9,7 +9,7 @@ module.exports = {
     entry: "./src/index.tsx",
     plugins: [
         new BundleAnalyzerPlugin({
-            analyzerMode: "static",
+            analyzerMode: "disable",
         }),
         new CompressionWebpackPlugin(),
         new HtmlWebpackPlugin({

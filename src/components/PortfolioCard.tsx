@@ -1,13 +1,5 @@
 import styled from "styled-components";
-import {
-    FlexCenter,
-    FlexColumn,
-    FlexRow,
-    ImageContainer,
-    ImageStyled,
-    Overlay,
-    StyledProps,
-} from "../styles/Utils.styled";
+import { FlexColumn, FlexRow, ImageContainer, ImageStyled, Overlay, StyledProps } from "../styles/Utils.styled";
 import { PropsWithChildren } from "react";
 import { ArticleStyled, H5Styled } from "../styles/Text.styled";
 
@@ -24,7 +16,7 @@ const CardContainer = styled(FlexColumn)`
             background: #49458146;
         }
 
-        img {
+        img.cover {
             scale: 1.02;
         }
     }
@@ -63,11 +55,12 @@ const PortfolioCard: React.FC<Props> = (props) => {
     return (
         <CardContainer>
             <ImageContainer>
-                <ImageStyled src={props.image}></ImageStyled>
+                <ImageStyled className="cover" src={props.image}></ImageStyled>
                 <Overlay className="overlay"></Overlay>
             </ImageContainer>
             <H5Styled>{props.title}</H5Styled>
             <Content>{props.content}</Content>
+            {props.children}
             <LinkContainer>
                 {props.appUrl && (
                     <LinkStyled href={props.appUrl} target="_blank" rel="noreferrer">

@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { useCountdown } from "../hooks";
-import { Content, H1Styled, Monospace, SubTitle, Title } from "../styles/Text.styled";
-import { useState } from "react";
+import { H1Styled, Monospace } from "../styles/Text.styled";
 import { FlexColumn, FlexRow } from "../styles/Utils.styled";
 
 const CarbonClockContainer = styled(FlexColumn)`
