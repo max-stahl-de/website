@@ -6,6 +6,7 @@ import { Monospace } from "../styles/Text.styled";
 
 const FooterStyled = styled(FlexRow)`
     width: 100vw;
+    max-width: 100%;
     min-height: 100px;
     padding: 10px 80px;
     background-color: #2b2b2b;

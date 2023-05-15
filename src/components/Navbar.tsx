@@ -9,7 +9,6 @@ import {
     NavbarMobileContainer,
     MenuButtonMobile,
 } from "../styles/Navbar.styled";
-import { ArticleStyled, H5Styled } from "../styles/Text.styled";
 import { useState } from "react";
 import Burger from "./Burger";
 import handleOnClick from "../utils";

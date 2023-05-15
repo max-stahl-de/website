@@ -24,6 +24,7 @@ export const Container = styled(FlexColumn)<StyledProps>`
     justify-content: flex-start;
     width: 100vw;
     min-height: 100vh;
+    max-width: 100%;
     color: ${({ color }) => color || "#2b2b2b"};
     padding: 80px 0px;
     background-color: ${({ bgColor }) => bgColor || "#fcfcfc"};

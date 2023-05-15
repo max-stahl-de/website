@@ -6,6 +6,7 @@ export const NavbarStyled = styled.nav`
     top: 0px;
     display: flex;
     width: 100vw;
+    max-width: 100%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -21,7 +22,7 @@ export const NavbarInnerContainer = styled.div`
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 0px 80px 0px 80px;
+    padding: 0px 70px 0px 70px;
 `;
 
 export const LogoButton = styled.button`
