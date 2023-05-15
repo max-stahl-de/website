@@ -34,6 +34,12 @@ export const ButtonStyled = styled.button<Props>`
     &:active {
         scale: 0.98;
     }
+
+    @media (max-width: 990px) {
+        min-width: 120px;
+        height: 40px;
+        font: bolder 15px "Roboto Mono", monospace;
+    }
 `;
 
 export const LinkButtonStyled = styled.button<Props>`
@@ -47,5 +53,9 @@ export const LinkButtonStyled = styled.button<Props>`
 
     &:hover {
         border-bottom: 2px solid ${({ color }) => color || "#335eea"};
+    }
+
+    @media (max-width: 990px) {
+        font: bolder 13px "Roboto Mono", monospace;
     }
 `;

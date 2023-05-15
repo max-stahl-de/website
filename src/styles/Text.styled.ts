@@ -16,6 +16,9 @@ export const H2Styled = styled.h2`
 
 export const H2MonoStyled = styled.h2`
     font: 400 30px "Roboto Mono", monospace;
+    @media (max-width: 990px) {
+        font: 400 15px "Roboto Mono", monospace;
+    }
 `;
 
 export const H3Styled = styled.h3`

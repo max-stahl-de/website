@@ -1,3 +1,4 @@
+import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import AboutMe from "./views/AboutMe";
 import Hello from "./views/Hello";
@@ -12,6 +13,7 @@ const App: React.FC = () => {
             <AboutMe></AboutMe>
             <Portfolio></Portfolio>
             <Sustainability></Sustainability>
+            <Footer></Footer>
         </>
     );
 };

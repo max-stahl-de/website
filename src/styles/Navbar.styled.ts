@@ -21,7 +21,7 @@ export const NavbarInnerContainer = styled.div`
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 0px 40px 0px 40px;
+    padding: 0px 80px 0px 80px;
 `;
 
 export const LogoButton = styled.button`

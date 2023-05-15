@@ -3,6 +3,7 @@ import { ButtonContainer, Container, FlexColumn, FlexRow, NavigationContainer } 
 import PortfolioCard from "../components/PortfolioCard";
 import styled from "styled-components";
 import Casama from "../assets/casama.jpg";
+import Website from "../assets/website.png";
 import Icas from "../assets/icas.jpg";
 import ContactMe from "../components/ContactMe";
 import PlatformIcons from "../components/PlatformIcons";
@@ -20,6 +21,17 @@ const PortfolioCardsContainer = styled.div`
 
     @media (max-width: 990px) {
         grid-template-columns: repeat(1, 1fr);
+    }
+`;
+
+const BadgeContainer = styled(FlexColumn)`
+    align-items: flex-start;
+    width: 100%;
+    gap: 10px;
+
+    img {
+        width: 230px;
+        height: 90px;
     }
 `;
 
@@ -42,16 +54,18 @@ const Portfolio: React.FC = () => {
                         appUrl="https://www.plathgroup.com/business-divisions/radio-reconnaissance-software.html"
                     ></PortfolioCard>
                     <PortfolioCard
-                        image={Casama}
+                        image={Website}
                         title="This website"
                         content="I developed this website as my first complete frontend project from scratch using ReactJS, TypeScript, styled-components, and webpack. Besides learning frontend technologies, my focus was on optimizing its performance and resource efficiency to provide a seamless browsing experience."
                         repoUrl="https://github.com/max-stahl-de/website"
                     >
-                        <WebsiteCarbonBadge co2="0.10" percentage="90" url="stahl-development-com" />
-                        <img
-                            src="https://api.thegreenwebfoundation.org/greencheckimage/stahl-development.com?nocache=true"
-                            alt="This website is hosted Green - checked by thegreenwebfoundation.org"
-                        ></img>
+                        <BadgeContainer>
+                            <WebsiteCarbonBadge co2="0.10" percentage="90" url="stahl-development-com" />
+                            <img
+                                src="https://api.thegreenwebfoundation.org/greencheckimage/stahl-development.com?nocache=true"
+                                alt="This website is hosted Green - checked by thegreenwebfoundation.org"
+                            ></img>
+                        </BadgeContainer>
                     </PortfolioCard>
                 </PortfolioCardsContainer>
                 <NavigationContainer>

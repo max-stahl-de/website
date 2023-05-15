@@ -15,6 +15,7 @@ const IconContainer = styled.div<Props>`
     svg {
         width: ${({ size }) => size || "30px"};
         height: ${({ size }) => size || "30px"};
+        fill: ${({ color }) => color || "#2b2b2b"};
     }
 
     a {

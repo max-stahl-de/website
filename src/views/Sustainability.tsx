@@ -17,11 +17,24 @@ const InnerContainer = styled(FlexColumn)`
     }
 `;
 
-const TextContainer = styled(FlexRow)`
+const SloganContainer = styled(FlexRow)`
     align-items: center;
+    justify-content: space-around;
+    margin-top: 40px;
+    width: 80%;
+    @media (max-width: 990px) {
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        margin-top: 10px;
+    }
+`;
+
+const TextContainer = styled(FlexRow)`
+    align-items: flex-start;
     justify-content: center;
     margin-top: 40px;
-    gap: 80px;
+    gap: 50px;
     width: 80%;
     @media (max-width: 990px) {
         flex-direction: column;
@@ -36,27 +49,28 @@ const CallToAction = styled.h1`
     font-style: italic;
     letter-spacing: 2px;
     color: #f2eb6f;
-    width: 10px;
+    width: 300px;
 `;
 
 const TextStyled = styled(ArticleStyled)`
     font: 300 18px "Roboto", sans-serif;
     line-height: 1.6;
+    text-align: left;
 
     span.bold {
         font: 500 18px "Roboto", sans-serif;
     }
 `;
 
-const Slogan = styled(FlexRow)`
-    width: 20%;
+const Slogan = styled(H4Styled)`
+    width: 40%;
     @media (max-width: 990px) {
         width: 99%;
     }
 `;
 
 const TextLeft = styled(FlexColumn)`
-    width: 35%;
+    width: 45%;
     @media (max-width: 990px) {
         width: 99%;
     }
@@ -77,12 +91,10 @@ const Sustainability: React.FC = () => {
             <H1Styled>sustainability.</H1Styled>
             <InnerContainer>
                 <CarbonClock></CarbonClock>
-                <TextContainer>
-                    <Slogan>
-                        <H4Styled>this is the time we have left to limit global warming to maximum 1.5°C.</H4Styled>
-                    </Slogan>
+                <SloganContainer>
+                    <Slogan>this is the time we have left to limit global warming to maximum 1.5°C.</Slogan>
                     <CallToAction>LET'S ACT!</CallToAction>
-                </TextContainer>
+                </SloganContainer>
                 <TextContainer>
                     <TextLeft>
                         <TextStyled>

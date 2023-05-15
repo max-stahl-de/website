@@ -74,6 +74,6 @@ export const Overlay = styled(FlexColumn)`
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #0b028847;
+    background-color: #0b028821;
     transition: all ease 0.2s;
 `;

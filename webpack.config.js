@@ -15,6 +15,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: "Max Stahl",
             template: "index.html",
+            favicon: "./src/assets/icon.png",
         }),
     ],
     module: {

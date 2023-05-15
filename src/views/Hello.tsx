@@ -5,6 +5,7 @@ import { H1Styled, H2Styled, H2MonoStyled } from "../styles/Text.styled";
 import { ButtonStyled, LinkButtonStyled } from "../styles/Button.styled";
 import ContactMe from "../components/ContactMe";
 import handleOnClick from "../utils";
+import { FlexColumn, FlexRow } from "../styles/Utils.styled";
 
 const HelloContainer = styled.div`
     display: flex;
@@ -35,14 +36,12 @@ const Content = styled.div`
     left: 0;
     width: 80%;
     height: 80%;
-    margin-left: 40px;
-    margin-top: 70px;
+    margin: 70px 40px 0px 40px;
 
     color: #fcfcfc;
 
     @media (max-width: 990px) {
         align-items: flex-start;
-        margin-right: 60px;
     }
 `;
 
@@ -52,18 +51,20 @@ const Intro = styled.div`
 
 const Claim = styled.div``;
 
-const Navigation = styled.div`
+const Navigation = styled(FlexRow)`
     display: flex;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 30px;
+    width: 100%;
+
+    @media (max-width: 990px) {
+        justify-content: center;
+    }
 `;
 
-const Banner = styled.div`
-    display: flex;
-    align-items: center;
+const Banner = styled(FlexColumn)`
     justify-content: space-between;
-    flex-direction: column;
     position: absolute;
     padding: 15px;
     bottom: 0;
@@ -83,6 +84,8 @@ const Banner = styled.div`
     @media (max-width: 990px) {
         width: 80%;
         margin-bottom: 0px;
+        height: 70px;
+        justify-content: space-between;
     }
 `;
 
@@ -98,12 +101,26 @@ const TextAnimationContainer = styled.div`
     .type-animation {
         font: bolder 48px "Roboto", sans-serif;
         @media (max-width: 990px) {
-            max-width: 5px;
+            font: bolder 30px "Roboto", sans-serif;
         }
     }
 
     .type-animation::after {
         font: lighter 48px "Roboto", sans-serif;
+        @media (max-width: 990px) {
+            font: bolder 30px "Roboto", sans-serif;
+        }
+    }
+`;
+
+const HelloH2Styled = styled(H2Styled)`
+    @media (max-width: 990px) {
+        font: lighter 30px "Roboto", sans-serif;
+    }
+`;
+const HelloH1Styled = styled(H1Styled)`
+    @media (max-width: 990px) {
+        font: bold 30px "Roboto", sans-serif;
     }
 `;
 
@@ -113,9 +130,9 @@ const Hello: React.FC = () => {
             <CoverImagerStyled src={Cover}></CoverImagerStyled>
             <Content>
                 <Intro>
-                    <H1Styled>Hello</H1Styled>
+                    <HelloH1Styled>Hello</HelloH1Styled>
                     <TextAnimationContainer>
-                        <H2Styled>I Am </H2Styled>
+                        <HelloH2Styled>I Am </HelloH2Styled>
                         <TypeAnimation
                             className="type-animation"
                             sequence={[
@@ -131,11 +148,11 @@ const Hello: React.FC = () => {
                     </TextAnimationContainer>
                 </Intro>
                 <Claim>
-                    <H2Styled>
+                    <HelloH2Styled>
                         I help you realize your next
                         <br /> software project!
-                    </H2Styled>
-                    <H1Styled>on time. sustainable.</H1Styled>
+                    </HelloH2Styled>
+                    <HelloH1Styled>on time. sustainable.</HelloH1Styled>
                 </Claim>
                 <Navigation>
                     <ContactMe style="white"></ContactMe>

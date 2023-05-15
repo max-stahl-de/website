@@ -13,6 +13,7 @@ import { ArticleStyled, H5Styled } from "../styles/Text.styled";
 import { useState } from "react";
 import Burger from "./Burger";
 import handleOnClick from "../utils";
+import Logo from "./Logo";
 
 const Navbar: React.FC = () => {
     const [openMobileMenu, setOpenMobileMenu] = useState(false);
@@ -25,8 +26,7 @@ const Navbar: React.FC = () => {
         <NavbarStyled>
             <NavbarInnerContainer>
                 <LogoButton onClick={() => handleOnClick("hello")}>
-                    <H5Styled>stahl-development</H5Styled>
-                    <ArticleStyled>sustainable software engineering</ArticleStyled>
+                    <Logo></Logo>
                 </LogoButton>
                 <LeftContainer>
                     <Menu>
