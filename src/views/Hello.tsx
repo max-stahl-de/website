@@ -5,7 +5,7 @@ import { H1Styled, H2Styled, H2MonoStyled } from "../styles/Text.styled";
 import { ButtonStyled, LinkButtonStyled } from "../styles/Button.styled";
 import ContactMe from "../components/ContactMe";
 import handleOnClick from "../utils";
-import { FlexColumn, FlexRow } from "../styles/Utils.styled";
+import { FlexColumn, FlexRow, ImageContainer, ImageStyled, Overlay } from "../styles/Utils.styled";
 
 const HelloContainer = styled.div`
     display: flex;
@@ -15,14 +15,6 @@ const HelloContainer = styled.div`
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-`;
-const CoverImagerStyled = styled.img`
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 `;
 
 const Content = styled.div`
@@ -127,7 +119,10 @@ const HelloH1Styled = styled(H1Styled)`
 const Hello: React.FC = () => {
     return (
         <HelloContainer id="hello">
-            <CoverImagerStyled src={Cover}></CoverImagerStyled>
+            <ImageContainer size={{ width: "100vw", height: "100vh" }}>
+                <ImageStyled src={Cover}></ImageStyled>
+                <Overlay></Overlay>
+            </ImageContainer>
             <Content>
                 <Intro>
                     <HelloH1Styled>Hello</HelloH1Styled>
@@ -149,7 +144,7 @@ const Hello: React.FC = () => {
                 </Intro>
                 <Claim>
                     <HelloH2Styled>
-                        I help you realize your next
+                        Let`s collaborate and realize your next
                         <br /> software project!
                     </HelloH2Styled>
                     <HelloH1Styled>on time. sustainable.</HelloH1Styled>
