@@ -134,6 +134,8 @@ const Hello: React.FC = () => {
                             sequence={[
                                 "Max Stahl",
                                 2500,
+                                "Freelancer",
+                                1500,
                                 "Senior Backend Developer",
                                 1500,
                                 "Sustainable Software Engineer",
