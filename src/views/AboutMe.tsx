@@ -115,9 +115,8 @@ const AboutMe: React.FC = () => {
                         <Listing
                             heading="Methods"
                             items={[
-                                "SCRUM",
-                                "LESS",
-                                "KANBAN",
+                                "Agile Development",
+                                "eXtreme Programming",
                                 "Servant Leadership",
                                 "Test-Driven-Development",
                                 "Sustainability",
