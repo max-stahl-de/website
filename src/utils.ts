@@ -1,8 +1,8 @@
-const handleOnClick = (elementId: string, action?: (param: boolean) => any) => {
+const handleOnClick = (elementId: string, action?: () => any) => {
     const element = document.getElementById(elementId);
     if (element) {
         element.scrollIntoView({ behavior: "smooth" });
-        action && action(false);
+        action && action();
     }
 };
 

@@ -23,19 +23,17 @@ export const NavbarInnerContainer = styled.div`
     justify-content: space-between;
     width: 100%;
     padding: 0px 70px 0px 70px;
+
+    @media (max-width: 990px) {
+        padding: 0px 5px 0px 15px;
+    }
 `;
 
 export const LogoButton = styled.button`
-    flex-shrink: 1;
     border: none;
     cursor: pointer;
     background-color: transparent;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
     min-width: 30%;
-    padding: 10px;
 `;
 
 export const LeftContainer = styled.div`

@@ -32,7 +32,7 @@ const Listing: React.FC<Props> = (props) => {
             <H6MonoStyled>{heading}</H6MonoStyled>
             <ListingStyled>
                 {items.map((item) => (
-                    <li>
+                    <li key={item}>
                         <Monospace>{item}</Monospace>
                     </li>
                 ))}

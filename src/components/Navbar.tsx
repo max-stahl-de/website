@@ -18,7 +18,7 @@ const Navbar: React.FC = () => {
     const [openMobileMenu, setOpenMobileMenu] = useState(false);
 
     const handleClick = (elementId: string) => {
-        handleOnClick(elementId, setOpenMobileMenu);
+        handleOnClick(elementId, () => setOpenMobileMenu((curr) => !curr));
     };
 
     return (
@@ -44,9 +44,9 @@ const Navbar: React.FC = () => {
             </NavbarInnerContainer>
             {openMobileMenu && (
                 <NavbarMobileContainer>
-                    <MenuButtonMobile onClick={() => handleOnClick("about_me")}>about me</MenuButtonMobile>
-                    <MenuButtonMobile onClick={() => handleOnClick("portfolio")}>portfolio</MenuButtonMobile>
-                    <MenuButtonMobile onClick={() => handleOnClick("sustainability")}>sustainability</MenuButtonMobile>
+                    <MenuButtonMobile onClick={() => handleClick("about_me")}>about me</MenuButtonMobile>
+                    <MenuButtonMobile onClick={() => handleClick("portfolio")}>portfolio</MenuButtonMobile>
+                    <MenuButtonMobile onClick={() => handleClick("sustainability")}>sustainability</MenuButtonMobile>
                 </NavbarMobileContainer>
             )}
         </NavbarStyled>
